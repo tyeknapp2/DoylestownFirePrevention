@@ -7,10 +7,13 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "lint": "eslint ."
   },
   "dependencies": {
+    "@nuxt/devtools": "^2.3.0",
     "@nuxt/eslint": "^1.2.0",
+    "@nuxtjs/color-mode": "^3.5.2",
     "eslint": "^9.22.0",
     "nuxt": "^3.16.0",
     "vue": "^3.5.13",

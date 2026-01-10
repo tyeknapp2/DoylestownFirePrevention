@@ -1,17 +1,15 @@
+import type { AppConfig } from "nuxt/schema";
+
+const appConfig:AppConfig = useAppConfig();
 /**
  * @constant {string} title - The title of the Doylestown Fire Prevention Expo.
  */
 const title = "Doylestown Fire Prevention Expo";
 
 /**
- * @constant {string} oneLiner - A single line description of the event for SEO and Social Media cards.
+ * @constant {string} oneLiner - .
  */
 const oneLiner: string = "Come join us for live demonstrations, fire safety tips, and more!";
-
-/**
- * @constant {string} patch - The path to the patch image for the website.
- */
-const patch: string = "Doylestown-patch.svg";
 
 /**
  * @constant {string} trimmedDemoImage - The path to the trimmed live demo image for the Social Media Cards.
@@ -41,7 +39,7 @@ export const useSetupSeoAndHead = ():void  => {
     ogUrl: "[og:url]",
     twitterTitle: title,
     twitterDescription: oneLiner,
-    twitterImage: `/${patch}`,
+    twitterImage: `/${appConfig.patch}`,
     twitterCard: twitterCardEnum.summary,
   });
 
@@ -55,12 +53,6 @@ export const useSetupSeoAndHead = ():void  => {
         content: "width=device-width, initial-scale=1",
       },
     ],
-    link: [
-      {
-        rel: "icon",
-        type: "image/svg",
-        href: patch,
-      },
-    ],
+    
   });
 }
